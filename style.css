@@ -1,1 +1,145 @@
 
+:root {
+    --red: #9e1b1b;
+    --gold: #c9a24d;
+    --bg: #f5efe6;
+    --card: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #2b2b2b;
+}
+
+header {
+    background: linear-gradient(90deg, var(--red), #7a1212);
+    color: white;
+    padding: 32px 16px 24px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card.hidden {
+    display: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.content {
+    padding: 20px 22px 26px;
+}
+
+.content h2 {
+    margin: 0 0 6px;
+    color: var(--red);
+    font-size: 1.6rem;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 14px;
+}
+
+.content p {
+    line-height: 1.65;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fffaf3;
+    margin: 8% auto;
+    padding: 24px 28px 32px;
+    border-radius: 18px;
+    max-width: 600px;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: var(--red);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

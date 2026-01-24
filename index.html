@@ -147,12 +147,10 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Thư viện Nhân vật Lịch sử Việt Nam</h1>
     <p>Tổ 1 – Lớp 12A4</p>
-
     <div class="search-box">
       <input
         type="text"
@@ -162,11 +160,9 @@
       />
     </div>
   </header>
-
   <main>
-    <!-- Card 1 -->
     <section class="card">
-      <img src="images/image.png" alt="Messi" />
+      <img src="images/image.png" />
       <div class="content">
         <h2>Messi</h2>
         <div class="subtitle">Siuuuu</div>
@@ -174,7 +170,7 @@
       </div>
     </section>
     <section class="card">
-      <img src="images/images.png" alt="Nguyễn Hữu Cảnh" />
+      <img src="images/images.png"/>
       <div class="content">
         <h2>Nguyễn Hữu Cảnh</h2>
         <div class="subtitle">Anh hùng dân tộc, danh nhân văn hóa</div>
@@ -199,7 +195,6 @@
         card.classList.toggle("hidden", !name.includes(input));
       });
     }
-
     function openDetail(card) {
       document.getElementById("detailName").innerText =
         card.querySelector("h2").innerText;
@@ -210,15 +205,12 @@
 
       document.getElementById("detailModal").style.display = "block";
     }
-
     function closeDetail() {
       document.getElementById("detailModal").style.display = "none";
     }
-
     document.querySelectorAll(".card").forEach(card => {
       card.addEventListener("click", () => openDetail(card));
     });
-
     window.addEventListener("click", e => {
       const modal = document.getElementById("detailModal");
       if (e.target === modal) closeDetail();
@@ -226,4 +218,5 @@
   </script>
 </body>
 </html>
+
 

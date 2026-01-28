@@ -542,6 +542,15 @@
             color: #666;
         }
         
+        /* NÚT TRẢ SÁCH TO HƠN */
+        .borrowed-item .btn-return {
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 140px;
+            border-radius: 8px;
+        }
+        
         @media (max-width: 968px) {
             .logo h1 {
                 font-size: 20px;
@@ -604,6 +613,10 @@
             .borrowed-item {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            
+            .borrowed-item .btn-return {
+                width: 100%;
             }
             
             .rules-content {
@@ -691,7 +704,7 @@
                     <option value="Tiếng Anh">Tiếng Anh</option>
                     <option value="Lịch sử">Lịch sử</option>
                     <option value="Hình học">Hình học</option>
-                    <option value="Văn Học">Văn học</option>
+                    <option value="Văn học">Văn học</option>
                 </select>
                 <input type="text" id="searchInput" placeholder="Tìm kiếm tên sách, tác giả..." oninput="render()">
             </div>
